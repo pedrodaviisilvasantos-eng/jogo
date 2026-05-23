@@ -228,7 +228,7 @@
 
         // Controle do tempo para regeneração de HP
         let lastRegenTime = 0;
-        const REGEN_INTERVAL = 1500; // 1.5 segundos em milissegundos
+        const REGEN_INTERVAL = 1200; // 1.5 segundos em milissegundos
 
         let platforms = [], ghosts = [], rats = [], gargoyles = [], shadows = [];
         let levers = [], statues = [], holes = [], spikes = [], goal = null;
@@ -390,7 +390,7 @@
                     }
                 }
                 for (let i = 0; i < 1 + Math.floor(lvl/3); i++) {
-                    ghosts.push({x: 600 + (i * 350), y: 130 + Math.random()*80, speed: 1.6 + (lvl*0.04)});
+                    ghosts.push({x: 600 + (i * 350), y: 130 + Math.random()*80, speed: 1.9 + (lvl*0.04)});
                 }
             }
 
@@ -523,7 +523,7 @@
                 }
 
                 if (Math.abs(pXCenter - bXCenter) < 40 && Math.abs(player.y - bossMago.y) < 90) {
-                    takeDamage(22, "Mago das Sombras Profundas");
+                    takeDamage(16, "Mago das Sombras Profundas");
                 }
             }
 
@@ -549,7 +549,7 @@
             if (levelType === 'Fuga da Névoa Tóxica') {
                 if (toxicMistY > 200) toxicMistY -= 0.32 + (level * 0.04);
                 if (player.y + player.height > toxicMistY) {
-                    takeDamage(1, "Névoa Sombria Tóxica");
+                    takeDamage(8, "Névoa Sombria Tóxica");
                 }
             }
 
