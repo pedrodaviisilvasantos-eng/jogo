@@ -459,7 +459,7 @@
             }
 
             if (level === 10 && !bossRat && rats.length === 0 && ghosts.length === 0 && gargoyles.length === 0) {
-                bossRat = { x: 700, y: 320, w: 55, h: 100, maxHp: 250, hp: 250, dir: -1, state: 'walk', timer: 0 };
+                bossRat = { x: 700, y: 320, w: 55, h: 100, maxHp: 100, hp: 100, dir: -1, state: 'walk', timer: 0 };
             }
 
             if (bossRat) {
@@ -486,7 +486,7 @@
                 }
 
                 if (Math.abs(pXCenter - bXCenter) < 45 && Math.abs(player.y - bossRat.y) < 90) {
-                    takeDamage(18, "Rei Rato de Eldoria");
+                    takeDamage(10, "Rei Rato de Eldoria");
                 }
             }
 
